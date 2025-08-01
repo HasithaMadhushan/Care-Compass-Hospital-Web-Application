@@ -1,0 +1,252 @@
+# CareCompass Hospital - .gitignore
+# This file specifies which files and directories should be ignored by Git
+
+# =============================================================================
+# DATABASE & CONFIGURATION FILES
+# =============================================================================
+
+# Database configuration (contains sensitive credentials)
+php/config.php
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.staging
+
+# Database dumps (except the main schema)
+*.sql
+!care_compass_db.sql
+
+# =============================================================================
+# UPLOADED FILES & MEDIA
+# =============================================================================
+
+# User uploaded content
+php/uploads/
+assets/user-uploads/
+
+# Generated PDFs and receipts
+*.pdf
+php/receipt*.pdf
+php/generated-receipts/
+
+# =============================================================================
+# SYSTEM FILES
+# =============================================================================
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# =============================================================================
+# IDE & EDITOR FILES
+# =============================================================================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# IntelliJ IDEA / PhpStorm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# =============================================================================
+# LOGS & TEMPORARY FILES
+# =============================================================================
+
+# Log files
+*.log
+logs/
+error_log
+access_log
+php_errors.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+*.cache
+
+# Session files
+sessions/
+*.sess
+
+# =============================================================================
+# DEPENDENCIES & BUILD FILES
+# =============================================================================
+
+# Composer (if used)
+vendor/
+composer.lock
+composer.phar
+
+# Node.js (if any frontend build tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Bower (if used)
+bower_components/
+
+# =============================================================================
+# BACKUP FILES
+# =============================================================================
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+*.save
+
+# =============================================================================
+# SECURITY & SENSITIVE FILES
+# =============================================================================
+
+# Private keys and certificates
+*.pem
+*.key
+*.crt
+*.csr
+*.p12
+*.pfx
+
+# Configuration files with sensitive data
+config.local.php
+database.local.php
+
+# =============================================================================
+# CACHE & COMPILED FILES
+# =============================================================================
+
+# PHP cache
+*.cache
+cache/
+opcache/
+
+# Compiled files
+*.compiled
+*.min.js
+*.min.css
+
+# =============================================================================
+# TESTING & DEVELOPMENT
+# =============================================================================
+
+# Test files
+tests/
+test/
+phpunit.xml
+.phpunit.result.cache
+
+# Coverage reports
+coverage/
+*.coverage
+*.cov
+
+# =============================================================================
+# FPDF SPECIFIC FILES
+# =============================================================================
+
+# FPDF generated fonts (can be regenerated)
+php/font/*.php
+php/font/*.z
+php/font/*.ttf
+
+# FPDF tutorial files (not needed in production)
+php/tutorial/
+
+# =============================================================================
+# PROJECT SPECIFIC
+# =============================================================================
+
+# Generated receipts (already covered above, but explicit)
+php/receipt_*.pdf
+php/generated_pdf.php
+
+# User uploaded images (already covered above, but explicit)
+php/uploads/*.jpg
+php/uploads/*.jpeg
+php/uploads/*.png
+php/uploads/*.gif
+
+# =============================================================================
+# MISC
+# =============================================================================
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Documentation builds
+docs/build/
+docs/_build/
+
+# Local development files
+local/
+dev/
+development/
+
+# =============================================================================
+# KEEP THESE FILES (EXPLICITLY INCLUDE)
+# =============================================================================
+
+# Main database schema
+!care_compass_db.sql
+
+# Default images (if they exist)
+!assets/logo.jpeg
+!assets/hero*.jpeg
+!assets/*.png
+!php/uploads/Default.jpg
+
+# README and documentation
+!README.md
+!LICENSE
+!CHANGELOG.md
+!CONTRIBUTING.md 
