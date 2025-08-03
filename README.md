@@ -84,4 +84,3 @@ CareCompassHospital/
 
 **CareCompass Hospital Management System** - Making healthcare management efficient and accessible.
 
-*Last updated: February 2025* 
